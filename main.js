@@ -1,9 +1,17 @@
 $(".toggleBtn").hover(function () {
     $(this).css("cursor", "pointer");
-    $(this).addClass("active");
+    $(this).addClass("highlighted");
 }, function () {
-    $(this).removeClass("active");
-})
+    $(this).removeClass("highlighted");
+});
+
+$(".toggleBtn").click(function () {
+    $(this).toggleClass("active");
+    $(this).removeClass("highlighted");
+
+    var panelId = $(this).attr("id") + "panel";
+    $("#" + panelId).toggleClass("hide");
+});
 
 $(".panel").height("85vh");
 $(".panel").width("25vw");
