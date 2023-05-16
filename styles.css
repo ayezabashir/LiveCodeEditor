@@ -71,3 +71,16 @@ textarea {
 #output {
   border-radius: 0 0.7rem 0.7rem 0;
 }
+@media screen and (max-width: 800px) {
+  #header {
+    height: 100px;
+  }
+  #logo {
+    width: 100%;
+    text-align: center;
+  }
+  #buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+}
